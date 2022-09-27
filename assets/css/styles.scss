@@ -22,7 +22,7 @@
     position: absolute;
     display: flex;
     left: 50%;
-    bottom: 0;
+    bottom: 2rem;
     transform: translateX(-50%);
 
     img {
@@ -32,6 +32,51 @@
 
       &.show {
         transform: scale(1);
+      }
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    gap: 10px;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 10%,
+      rgba(255, 255, 255, 0)
+    );
+
+    & > * {
+      font-weight: bold;
+      padding: 1rem 0.75rem;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 50px;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.4s ease;
+
+      &.pink {
+        background-color: #f13676;
+        color: #fff;
+      }
+
+      &.yellow {
+        background-color: #fecb33;
+        color: green;
+      }
+    }
+
+    &.show {
+      & > * {
+        opacity: 1;
+        pointer-events: all;
       }
     }
   }

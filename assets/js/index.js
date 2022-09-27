@@ -16,5 +16,12 @@ bubbles.forEach((el) => {
     }, 100);
     const audio = new Audio("./assets/audio/bubble.wav");
     audio.play();
+
+    if (
+      document.querySelectorAll(".main-section > .bubble:not(.remove)")
+        .length === 0
+    ) {
+      document.querySelector(".main-section .buttons").classList.add("show");
+    }
   });
 });

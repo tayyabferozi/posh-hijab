@@ -244,7 +244,7 @@
   display: -ms-flexbox;
   display: flex;
   left: 50%;
-  bottom: 0;
+  bottom: 2rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -260,6 +260,53 @@
 .main-section .prods img.show {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.main-section .buttons {
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 0;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  gap: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(10%, white), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(to top, white 10%, rgba(255, 255, 255, 0));
+}
+
+.main-section .buttons > * {
+  font-weight: bold;
+  padding: 1rem 0.75rem;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 50px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.main-section .buttons > *.pink {
+  background-color: #f13676;
+  color: #fff;
+}
+
+.main-section .buttons > *.yellow {
+  background-color: #fecb33;
+  color: green;
+}
+
+.main-section .buttons.show > * {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .bubble {
