@@ -294,6 +294,11 @@
   transition: 0.4s ease;
 }
 
+.main-section .buttons > *:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .main-section .buttons > *.pink {
   background-color: #f13676;
   color: #fff;
